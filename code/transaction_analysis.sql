@@ -63,7 +63,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1;
 
--- Compute percentage split of all transactions for members/non-members by Month
+-- Percentage split of all transactions for members/non-members by Month
 WITH transactions_cte AS (
   -- Compute the total number of transactions by month and member/non-member
   SELECT 
