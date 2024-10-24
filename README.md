@@ -23,7 +23,7 @@ The second, balanced_tree.sales contains product level information for all the t
 member status, a transaction ID and also the transaction timestamp. The previous table spans data from the Q1 of 2021.The tables contains 12 and 15,095 observations respectively or 15,107 in total.
 
 
-![erd-diagram](erd-diagram.png)
+![erd](erd.png)
 
 
 ## Executive summary
