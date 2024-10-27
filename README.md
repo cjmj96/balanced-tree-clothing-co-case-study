@@ -21,7 +21,7 @@ financial metrics on a montly and daily basis.
 
 ## Data structure and initial checks
 
-The dataset (database) presents 4 tables. The first, called `balanced_tree.product_details` includes all information about the entire range that Balanced Clothing sells in their store.
+The dataset (database) presents 2 tables. The first, called `balanced_tree.product_details` includes all information about the entire range that Balanced Clothing sells in their store.
 The second, `balanced_tree.sales` contains product level information for all the transactions made for Balanced Tree including quantity, price, percentage discount, 
 member status, a transaction ID and also the transaction timestamp. The previous table spans data from the Q1 of 2021.The tables contains 12 and 15,095 observations respectively or 15,107 in total.
 
