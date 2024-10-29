@@ -37,7 +37,7 @@ The database schema can be found [here](https://github.com/cjmj96/balanced-tree-
 The sales of the current month (March 2021) exhibits positive performance in different financial health metrics compared to previous months (February and January). The metrics used were Total units sold, Total sales revenue, Net sales revenue and Gross profit. The following sections
 will explore additional contributing factors and highlight key opportunity areas for improvement.
 
-Below is the high level analysis page from the Tableau Dashboard and more examples are included throughout the report. The entire interactive dashboard can be viewed [here](https://public.tableau.com/views/SalesPerformanceDashboardforBalancedTreeClothingCompany/HighLevelAnalysisDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+Below is the high level analysis page from the Tableau Dashboard and more examples are included throughout the report. The entire interactive dashboard can be viewed [here](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
 [![Financial Sales Analysis Dashboards](https://public.tableau.com/static/images/Fi/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard/1_rss.png)](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard)
 
@@ -118,7 +118,7 @@ In March, the average discount value reached a 11.8%, down by 3.4% from February
 
 ### Transaction Split for member vs non-member
 
-In March, the transactions are mostly done by member clients with a 67.7% (510), a consistent trend also observed in previous months.
+In March, the transactions are mostly done by member clients with a 59% (510), a consistent trend also observed in previous months.
 
 ![transactions-split-for-member-vs-non-member](./transactions-split-for-member-vs-non-member.PNG)
 
@@ -134,7 +134,7 @@ In March, the average sales revenue was $86 and $87 for member and non-member re
 
 ### Top 3 Products by Sales Revenue (Pre-discount)
 
-The month of March, saw the blue polo shirt ($75,000), the grey fashion jacket ($71,000), and the white tees shirt ($54,000) generating the highest revenues. This pattern of sales was similar to that of February. However, the rankings for this were different for that of January, where the grey fashion jacket sold the most, followed closely by the blue polored polo shirt which took the second position.
+The month of March, saw the Blue Polo Shirt ($75,000), the Grey Fashion Jacket ($71,000), and the white tees shirt ($54,000) generating the highest revenues. This pattern of sales was similar to that of February. However, the rankings for this were different for that of January, where the grey fashion jacket sold the most, followed closely by the blue polored polo shirt which took the second position.
 
 ![top-3-products-by-sales-revenue](./top-3-products-by-sales-revenue.PNG)
 
@@ -146,7 +146,15 @@ In March, Men’s products still were the leading category with 56% share of tot
 
 ### Top Product per Category
 
-In the month of March, the blue polo shirt topped Men’s sales with 1,324 units while grey fashion jacket topped Women’s sales with 1,322 units. This is an unwavering trend as the two products have been on top since the month of January.
+It has been observed that there were some differences in the montly top revenue earner items 
+for both Men and Women. In the case of March came in, the Pink Fluro Polkadot Socks (1,367 units) 
+and the Navy Oversized Jeans (1,375 units) proved to be the top winners respectively. The 
+Blue Polo Shirts (1,281 units) in the Men category the highest sales recorded in the month 
+of February while in the Women category was the Khaki Suit Jackets (1,296 units) which posted 
+the highest unit sales. Only a change in the Women category was recorded in January with the 
+Grey Fashion Jackets being the leading product (1,300 units), the Blue Polo Shirts product 
+maintained their place (1,264 units).
+
 
 ![top-product-per-category](./top-product-per-category.PNG)
 
@@ -164,8 +172,7 @@ In March, the revenue distribution indicated Men's Shirts leading at 56.5% while
 
 ### Top Product per Segment
 
-In March, the leaders by category stood as the following - Black Straight Jeans (1,324 units) in Jeans, Blue Polo Shirts (1,281 units) in Shirts, Grey Fashion Jackets (1,254 units) in the Jackets category, and Solid Navy Socks (1,190 units) in the sock category. These products, however, saw similar trends whereby these products maintained the segments for each of the months for the Q1 (January –March).
-
+In March, established performers were Navy Oversized Jeans (1,375 pieces) in Jeans, White Tee Shirts (1,346 pieces) in Shirts, Grey Stylish Jackets (1,322 pieces) in Jackets, and Pink Fluro Polka Dot Socks (1,367 pieces) in Socks. It is interesting to note that February registered a total turnaround in the top products in the various segments with the only exception of White Tee Shirts whose performance was the same in January.
 
 ![top-product-per-segment](./top-product-per-segment.PNG)
 
@@ -211,8 +218,8 @@ In consideration of the findings derived from the case study, the following are 
 3. Inventory Management:
                                                  
      3.1 Continue to stock the highest selling three products which include 
-     the Black Straight Jeans, Pink Fluorescent Polka Dot Socks and White
-      Dinner T-shirt in relatively higher quantities. 
+     the Black Straigth Jeans, Pink Fluro Polkadot Socks, White Tee Shirt, 
+     Khaki Suit Jacket, and Navy Solid Socks in relatively higher quantities. 
 
      3.2 Introduce clutter-busting or simplification strategies on certain 
     products accompanied by the re-planning of inventory management where
