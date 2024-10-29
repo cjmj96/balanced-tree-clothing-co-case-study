@@ -1,4 +1,4 @@
--- Total Quantity sold by Month
+-- Cantidad total vendida por mes
 SELECT 
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
   SUM(sales.qty) AS total_quantity
@@ -8,7 +8,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1;
 
--- Total Quantity sold by Day
+-- Cantidad total vendida por día
 SELECT 
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day_name,
   SUM(sales.qty) AS total_quantity
@@ -18,7 +18,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1 
 ORDER BY 1, 2 DESC;
 
--- Total Sales Revenue before Discount by Month
+-- Ingresos totales por ventas antes del descuento por mes
 SELECT 
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
   SUM(sales.qty) * SUM(sales.price) AS total_sales_revenue
@@ -27,7 +27,7 @@ INNER JOIN balanced_tree.product_details AS product
 	ON sales.prod_id = product.product_id
 GROUP BY 1;
 
--- Total Sales Revenue before Discount by Day
+-- Ingresos totales por ventas antes del descuento por día
 SELECT 
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day_name,
   SUM(sales.qty * sales.price) AS total_sales_revenue
@@ -37,7 +37,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1, 2 DESC;
 
--- Net Sales Revenue by Month
+-- Ingresos netos por ventas mensuales
 SELECT
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month, 
   SUM(sales.qty * sales.price) - SUM(sales.qty * sales.price * sales.discount/100) AS net_sales_revenue
@@ -46,7 +46,7 @@ INNER JOIN balanced_tree.product_details AS product
 	ON sales.prod_id = product.product_id
 GROUP BY 1;
 
--- Net Sales Revenue by day
+-- Ingresos netos por ventas por día
 SELECT
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day_name, 
   SUM(sales.qty * sales.price) - SUM(sales.qty * sales.price * sales.discount/100) AS net_sales_revenue
@@ -56,7 +56,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1, 2 DESC;
 
--- Total Discount Amount by Month
+-- Monto total de descuentos por mes
 SELECT
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month, 
   SUM(sales.qty * sales.price * sales.discount/100) AS total_discount
@@ -65,7 +65,7 @@ INNER JOIN balanced_tree.product_details AS product
 	ON sales.prod_id = product.product_id
 GROUP BY 1;
 
--- Total Discount Amount by Day
+-- Monto total de descuentos por día
 SELECT
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day_name, 
   SUM(sales.qty * sales.price * sales.discount/100) AS total_discount
@@ -75,7 +75,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1, 2 DESC;
 
--- Gross Profit by Month
+-- Beneficio bruto por mes
 SELECT
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month, 
   SUM(sales.qty * sales.price) - SUM(sales.qty * sales.price * sales.discount/100) - (SUM(sales.qty * sales.price) - SUM(sales.qty * sales.price * sales.discount/100)) * 0.60 AS gross_profit
@@ -84,7 +84,7 @@ INNER JOIN balanced_tree.product_details AS product
 	ON sales.prod_id = product.product_id
 GROUP BY 1;
 
--- Gross Profit by Day
+-- Beneficio bruto por día
 SELECT
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day_name, 
   SUM(sales.qty * sales.price) - SUM(sales.qty * sales.price * sales.discount/100) - (SUM(sales.qty * sales.price) - SUM(sales.qty * sales.price * sales.discount/100)) * 0.60 AS gross_profit
@@ -94,7 +94,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1, 2 DESC;
 
--- Total Sales Revenue before Discount and Gross Profit by Segment and Month
+-- Ingresos totales por ventas antes de descuentos y beneficio bruto por segmento y mes
 SELECT 
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
   product.segment_name,

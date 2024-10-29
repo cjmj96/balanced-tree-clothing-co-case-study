@@ -1,4 +1,4 @@
--- Top 3 products by total revenue before discount by Month
+-- 3 productos principales por ingresos totales antes del descuento por mes
 WITH ranked_products AS (
   SELECT
     TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
@@ -17,7 +17,7 @@ FROM ranked_products
 WHERE rank <= 3
 ORDER BY month, revenue DESC;
 
--- Top selling product for each segment by Month
+-- Producto más vendido por segmento cada mes
 WITH top_selling_cte AS ( 
   SELECT 
     TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
@@ -46,7 +46,7 @@ SELECT
 FROM top_selling_cte
 WHERE ranking = 1;
 
--- Top selling product for each category by Month
+-- Producto más vendido por categoría cada mes
 WITH top_selling_cte AS ( 
   SELECT
     TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
@@ -75,7 +75,7 @@ SELECT
 FROM top_selling_cte
 WHERE ranking = 1;
 
--- Percentage split of revenue by product for each segment by Month
+-- Distribución porcentual de los ingresos por producto para cada segmento por mes
 WITH product_revenue AS (
     SELECT
         TO_CHAR(DATE_TRUNC('month', s.start_txn_time::timestamp), 'FMMonth') AS month, 
@@ -119,7 +119,7 @@ ON
     pr.segment_id = sr.segment_id AND pr.month = sr.month
 ORDER BY sr.month;
 
--- Percentage split of revenue by segment for each category by Month
+-- Distribución porcentual de los ingresos por segmento para cada categoría por mes
 WITH segment_revenue AS (
     SELECT 
         TO_CHAR(DATE_TRUNC('month', s.start_txn_time::timestamp), 'FMMonth') AS month, 
@@ -166,7 +166,7 @@ ON
 ORDER BY 
     sr.month, sr.segment_id;
 
--- Percentage split of total revenue by category and Month
+-- Distribución porcentual de los ingresos totales por categoría y mes
 WITH product_revenue AS (
     SELECT
         TO_CHAR(DATE_TRUNC('month', start_txn_time::timestamp), 'FMMonth') AS month, 
@@ -213,7 +213,7 @@ ON
     cr.month = tr.month
 ORDER BY 1, 2;
 
--- Total transaction “penetration” for each product by Month
+-- Penetración total de transacciones para cada producto por mes
 WITH total_transactions AS (
     SELECT
       TO_CHAR(DATE_TRUNC('month', start_txn_time::timestamp), 'FMMonth') AS month,
@@ -244,7 +244,7 @@ JOIN total_transactions tt ON pt.month = tt.month
 GROUP BY 1, 2, 3, 4, 5
 ORDER BY 1, 6 DESC;
 
--- Most Common 3-Product combination in transactions by Month
+-- Combinación de 3 productos más común en transacciones por mes
 WITH transaction_products AS (
     SELECT
         TO_CHAR(DATE_TRUNC('month', start_txn_time), 'FMMonth') AS month,

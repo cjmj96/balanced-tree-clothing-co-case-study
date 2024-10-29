@@ -1,11 +1,11 @@
--- Unique transactions by Month
+-- Transacciones únicas por mes
 SELECT 
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
   COUNT(DISTINCT sales.txn_id) AS transaction_count
 FROM balanced_tree.sales AS sales
 GROUP BY 1;
 
--- Unique transactions by Day
+-- Transacciones únicas por día
 SELECT 
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day_name,
   COUNT(DISTINCT sales.txn_id) AS transaction_count
@@ -13,7 +13,7 @@ FROM balanced_tree.sales AS sales
 GROUP BY 1
 ORDER BY 1, 2 DESC;
 
--- Average unique products purchased in each transaction by Month
+-- Promedio de productos únicos comprados en cada transacción por mes
 SELECT 
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
   ROUND(AVG(total_quantity), 1) AS avg_unique_products
@@ -28,7 +28,7 @@ JOIN balanced_tree.sales AS sales ON sales.txn_id = total_quantities.txn_id
 GROUP BY 1 
 ORDER BY 1;
 
--- Average unique products purchased in each transaction by Day
+-- Promedio de productos únicos comprados en cada transacción por día
 SELECT 
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day,
   ROUND(AVG(total_quantity), 1) AS avg_unique_products
@@ -43,7 +43,7 @@ JOIN balanced_tree.sales AS sales ON sales.txn_id = total_quantities.txn_id
 GROUP BY 1 
 ORDER BY 1;
 
--- Average discount value per transaction by Month
+-- Valor promedio de descuento por transacción por mes
 SELECT 
   TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
   ROUND(AVG(sales.discount), 1) AS avg_discount_value
@@ -53,7 +53,7 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1;
 
--- Average discount value per transaction by Day
+-- Valor promedio de descuento por transacción por día
 SELECT 
   TO_CHAR(DATE_TRUNC('day', sales.start_txn_time::timestamp), 'YYYY-MM-DD') AS day,
   ROUND(AVG(sales.discount), 1) AS avg_discount_value
@@ -63,9 +63,9 @@ INNER JOIN balanced_tree.product_details AS product
 GROUP BY 1
 ORDER BY 1;
 
--- Percentage split of all transactions for members/non-members by Month
+-- Porcentaje de todas las transacciones para miembros/no miembros por mes
 WITH transactions_cte AS (
-  -- Compute the total number of transactions by month and member/non-member
+  -- Calcular el número total de transacciones por mes y miembro/no miembro
   SELECT 
     member,
     TO_CHAR(DATE_TRUNC('month', sales.start_txn_time::timestamp), 'FMMonth') AS month,
@@ -78,12 +78,12 @@ SELECT
   month,
   member,
   transactions,
-  -- Calculate the percentage of transactions that are members/non-members
+  -- Calcular el porcentaje de transacciones que son de miembros/no miembros
   ROUND(100.0 * transactions / NULLIF(SUM(transactions) OVER (PARTITION BY month), 0), 1) AS percentage
 FROM transactions_cte
 ORDER BY 1, 2;
 
--- Average revenue for member transactions and non-member transactions by Month
+-- Ingreso promedio por transacciones de miembros y no miembros por mes
 WITH revenue_cte AS (
   SELECT
     member,
