@@ -1,243 +1,214 @@
-# Analysis of Sales performance for Balanced Tree Clothing Company
+# Análisis del rendimiento de ventas de Balanced Tree Clothing Company
 
 
-## Project Background
+## Antecedentes del Proyecto
 
-Balanced Tree Clothing Company prides themselves on providing an optimised range of clothing and lifestyle wear for the modern adventurer!
+¡La compañía Balanced Tree Clothing se enorgullece de ofrecer una gama optimizada de ropa y vestimenta para el estilo de vida del aventurero moderno!
 
-Danny, the CEO of this trendy fashion company has asked you to assist the team’s merchandising teams analyse their sales performance and generate a basic financial report to share with the wider business.
+Danny, el CEO de esta moderna empresa de moda, te ha pedido que ayudes a los equipos de merchandising a analizar su rendimiento de ventas y generar un informe financiero básico para compartir con el resto de la empresa.
 
-This project analyze data from products and sales to determine the sales performance of the company.
+Este proyecto analiza datos de productos y ventas para determinar el rendimiento de ventas de la empresa.
 
-The insights and recommendations are given in the following key areas:
+Las ideas y recomendaciones se presentan en las siguientes áreas clave:
 
-- High level analysis: Provides a high level overview about the sales performance of the company, including
-financial metrics on a montly and daily basis.
+- Análisis de alto nivel: Proporciona una visión general de alto nivel sobre el rendimiento de ventas de la empresa, incluyendo métricas financieras de manera mensual y diaria.
 
-- Transaction analysis: Analyze transaction-related data to extract KPIs, including unique transactions, average unique products purchased in each transaction, average discount value per transaction, etc.
+- Análisis de transacciones: Analizar los datos relacionados con las transacciones para extraer KPIs, incluyendo transacciones únicas, promedio de productos únicos comprados en cada transacción, valor promedio de descuento por transacción, etc.
 
-- Product analysis: Analyze product-related data to extract KPIs, including  total quantity, revenue and discount for each segment, top selling product for each segment, top selling product for each category, etc.
+- Análisis de productos: Analizar los datos relacionados con el producto para extraer KPIs, incluyendo la cantidad total, los ingresos y los descuentos para cada segmento, el producto más vendido para cada segmento, el producto más vendido para cada categoría, etc.
 
 
-## Data structure and initial checks
+## Estructura de datos y verificaciones iniciales
 
-The dataset (database) presents 2 tables. The first, called `balanced_tree.product_details` includes all information about the entire range that Balanced Clothing sells in their store.
-The second, `balanced_tree.sales` contains product level information for all the transactions made for Balanced Tree including quantity, price, percentage discount, 
-member status, a transaction ID and also the transaction timestamp. The previous table spans data from the Q1 of 2021.The tables contains 12 and 15,095 observations respectively or 15,107 in total.
+El conjunto de datos (base de datos) presenta 2 tablas. El primero, llamado `balanced_tree.product_details`, incluye toda la información sobre toda la gama que Balanced Clothing vende en su tienda. El segundo, `balanced_tree.sales`, contiene información a nivel de producto para todas las transacciones realizadas para Balanced Tree, incluyendo cantidad, precio, porcentaje de descuento, estado de miembro, un ID de transacción y también la marca de tiempo de la transacción. La tabla anterior abarca datos del primer trimestre de 2021.Las tablas contienen 12 y 15,095 observaciones respectivamente o 15,107 en total.
+
 
 
 ![erd](erd.png)
 
-The database schema can be found [here](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/main/code/balanced_tree_clothing_co_schema.sql).
+El esquema de base datos puede ser encontrado [aquí](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/balanced_tree_clothing_co_schema.sql)
 
-## Executive Summary
 
-### Overview of Findings
+## Resumen Ejecutivo
 
-The sales of the current month (March 2021) exhibits positive performance in different financial health metrics compared to previous months (February and January). The metrics used were Total units sold, Total sales revenue, Net sales revenue and Gross profit. The following sections
-will explore additional contributing factors and highlight key opportunity areas for improvement.
+### Visión general de descubrimientos
 
-Below is the high level analysis page from the Tableau Dashboard and more examples are included throughout the report. The entire interactive dashboard can be viewed [here](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+Las ventas del mes actual (marzo de 2021) muestran un desempeño positivo en diferentes métricas de salud financiera en comparación con los meses anteriores. (February and January). Las métricas utilizadas fueron Total de unidades vendidas, Ingresos totales por ventas, Ingresos netos por ventas y ganancia bruta. Las siguientes secciones explorarán factores adicionales que contribuyen y destacarán áreas clave de oportunidad para la mejora.
 
-[![Financial Sales Analysis Dashboards](https://public.tableau.com/static/images/Fi/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard/1_rss.png)](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard)
+A continuación se muestra la página de análisis de alto nivel del Tableau Dashboard y se incluyen más ejemplos a lo largo del informe. El panel interactivo completo se puede ver [aquí](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
-The following links contains all the PostgreSQL queries that we used in our sales analysis. These queries are available in the `/code` directory, specifically in these GitHub links: [High-Level Analysis](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/main/code/high_level_analysis.sql),[Transaction Analysis](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/main/code/transaction_analysis.sql), and [Product Analysis](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/main/code/product_analysis.sql).
+[![Tableros de análisis de ventas financieras](https://public.tableau.com/static/images/An/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard/1.png)](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard)
 
-## High Level Analysis
+Los siguientes enlaces contienen todas las consultas de PostgreSQL que utilizamos en nuestro análisis de ventas. Estas consultas están disponibles en el directorio `/codigo`, específicamente en estos enlaces de GitHub: [Análisis de alto nivel](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_alto_nivel.sql), [Análisis de transacciones](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_transacciones.sql), y [Análisis de productos](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_productos.sql).
 
+### Análisis de alto nivel
 
-### Total Units Sold
 
-In March, the amount of units sold was 15,608, up by 5.3% (+788 units) from February (14,820). This trend is also apparent in the 5.5% increase from January.
+#### Unidades totales vendidas
 
+En marzo, la cantidad de unidades vendidas fue de 15,608, un aumento del 5.3% (+788 unidades) en comparación con febrero. (14,820). Esta tendencia también es evidente en el aumento del 5.5% desde enero.
 
-![total-units-sold](./total-units-sold.PNG)
 
-### Total Sales Revenue
+¡[unidades-vendidas-totales](./unidades-vendidas-totales.PNG)
 
-In March, the total sales revenue reached $447,227, up by 6.1% from February ($421,554). This consistent growth pattern is also observed in 
-the 6.3% increase from January.
+#### Ingresos totales por ventas
 
-![total-sales-revenue](./total-sales-revenue.PNG)
+En marzo, los ingresos totales por ventas alcanzaron los $447,227, un aumento del 6.1% respecto a febrero ($421,554). Este patrón de crecimiento constante también se observa en el aumento del 6.3% desde enero.
 
-### Net Sales Revenue
+¡[ingresos-totales-por-ventas](./ingresos-totales-por-ventas.PNG)
 
-In March, the net sales revenue climbed to $394,248, up by 6.6% from February ($421,554). This consistent growth pattern is also observed in 
-the 6.8% increase from January.
+#### Ingresos por ventas netas
 
-![net-sales-revenue](./net-sales-revenue.PNG)
+En marzo, los ingresos netos por ventas ascendieron a $394,248, un aumento del 6.6% respecto a febrero ($421,554). Este patrón de crecimiento constante también se observa en el aumento del 6.8% desde enero.
 
-### Total Discount Amount
+¡[ingresos-por-ventas-netas](./ingresos-por-ventas-netas.PNG)
 
-In March, the total discount amount reached $52,978, up by 2.5% from February ($51,661). This consistent growth pattern is also observed in the 2.6% rise from January.
+#### Monto total del descuento
 
-![total-discount-amount](./total-discount-amount.PNG)
+En marzo, el monto total de descuentos alcanzó los $52,978, un aumento del 2.5% respecto a febrero ($51,661). Este patrón de crecimiento constante también se observa en el aumento del 2.6% desde enero.
 
-### Gross Profit
+¡[total-discount-amount](./monto-total-de-descuento.PNG)
 
+#### Beneficio bruto
 
-In March, the gross profit climbed to $157,699, up by 6.6% from February ($147,957). This consistent growth pattern is also observed in the 6.8% increase from January.
 
-![gross-profit](./gross-profit.PNG)
+En marzo, el beneficio bruto ascendió a $157,699, un aumento del 6.6% respecto a febrero ($147,957). Este patrón de crecimiento constante también se observa en el aumento del 6.8% desde enero.
 
+![beneficio-bruto](./beneficio-bruto.PNG)
 
 
-### Sales Revenue & Gross Profit by Segment
 
+#### Ingresos por ventas y beneficio bruto por segmento
 
-Shirts were the leader in both sales revenue and profit with $141,500 and $49,800, respectively. This represented a 6.4% increase in revenue and and 6.7% increase in profit from February, as well a considerable 7.52%, 7.7% growth in both metrics from January.
 
-![sales-revenue-and-gross-profit-by-segment](./sales-revenue-and-gross-profit-by-segment.PNG)
+Las camisas fueron las líderes tanto en ingresos por ventas como en ganancias, con $141,500 y $49,800, respectivamente. Esto representó un aumento del 6.4% en los ingresos y un aumento del 6.7% en las ganancias desde febrero, así como un crecimiento considerable del 7.52% y del 7.7% en ambas métricas desde enero.
 
-## Transaction Analysis
+![ingresos-por-ventas-y-beneficio-bruto-por-segmento](./ingresos-por-ventas-y-beneficio-bruto-por-segmento.PNG)
 
+### Análisis de transacciones
 
-### Unique Transactions
 
-March had 860 transactions, up by 5.9% from February (812). This consistent growth pattern is also observed in the 3.86% increase from January (828).
+#### Transacciones únicas
 
+Marzo tuvo 860 transacciones, un aumento del 5.9% en comparación con febrero. (812). Este patrón de crecimiento constante también se observa en el aumento del 3.86% desde enero. (828).
 
-![unique-transactions](./unique-transactions.PNG)
 
-### Average Unique Products per Transaction
+¡[transacciones únicas](./transacciones-unicas.PNG)
 
+#### Promedio de productos únicos por transacción
 
-In March, customers bought an average of 6.5 distinct items per transactions, down by 1% from February (6.6). This pattern is inexistent (6.5) in January.
 
+En marzo, los clientes compraron un promedio de 6.5 artículos distintos por transacción, una disminución del 1% en comparación con febrero. (6.6). Este patrón es inexistente (6.5) en enero.
 
-![average-unique-products-per-transaction](./average-unique-products-per-transaction.PNG)
 
+![promedio-de-productos-unicos-por-transaccion](./promedio-de-productos-por-transaccion.PNG)
 
-### Average Discount Value
 
+#### Valor promedio de descuento
 
-In March, the average discount value reached a 11.8%, down by 3.4% from February. This consistent decrease pattern is also observed in the 
-4% decrease from January.
 
-![average-discount-value](./average-discount-value.PNG)
+En marzo, el valor promedio del descuento alcanzó un 11.8%, una disminución del 3.4% en comparación con febrero. Este patrón de disminución constante también se observa en la disminución del 4% desde enero.
 
-### Transaction Split for member vs non-member
+¡[valor-promedio-de-descuento](./valor-promedio-de-descuento.PNG)
 
-In March, the transactions are mostly done by member clients with a 59% (510), a consistent trend also observed in previous months.
+#### División de transacciones para miembros vs no miembros
 
-![transactions-split-for-member-vs-non-member](./transactions-split-for-member-vs-non-member.PNG)
+En marzo, las transacciones son realizadas principalmente por clientes miembros con un 59% (510), una tendencia consistente también observada en meses anteriores.
 
+¡[transacciones-divididas-para-miembro-vs-no-miembro](./transacciones-entre-miembros-y-no-miembros.PNG)
 
-### Average Sales Revenue for member vs non-member
 
-In March, the average sales revenue was $86 and $87 for member and non-member respectively. These amounts remained relatively stable in previous months.
+#### Ingresos promedio de ventas para miembros vs no miembros
 
+En marzo, el ingreso promedio por ventas fue de $86 y $87 para miembros y no miembros, respectivamente. Estas cantidades se mantuvieron relativamente estables en los meses anteriores.
 
-![average-sales-revenue-for-member-vs-non-member](./average-sales-revenue-for-member-vs-non-member.PNG)
 
-## Product Analysis
+¡[ingresos-promedio-de-ventas-para-miembros-vs-no-miembros](./ingresos-por-ventas-promedio-entre-miembros-y-no-miembros.PNG)
 
-### Top 3 Products by Sales Revenue (Pre-discount)
 
-The month of March, saw the Blue Polo Shirt ($75,000), the Grey Fashion Jacket ($71,000), and the white tees shirt ($54,000) generating the highest revenues. This pattern of sales was similar to that of February. However, the rankings for this were different for that of January, where the grey fashion jacket sold the most, followed closely by the blue polored polo shirt which took the second position.
+### Análisis de productos
 
-![top-3-products-by-sales-revenue](./top-3-products-by-sales-revenue.PNG)
+#### Los 3 productos principales por ingresos de ventas (antes del descuento)
 
-### Sales Revenue Split by Category (%)
+El mes de marzo, la Camisa Polo Azul ($75,000), la Chaqueta de Moda Gris ($71,000) y la camiseta blanca ($54,000) generaron los mayores ingresos. Este patrón de ventas fue similar al de febrero. Sin embargo, los rankings para esto fueron diferentes a los de enero, donde la chaqueta de moda gris se vendió más, seguida de cerca por la camiseta polo de color azul que ocupó la segunda posición.
 
-In March, Men’s products still were the leading category with 56% share of total sales revenue. This lead, interestingly, is the same for the last two months of February and January.
+![top-3-productos-por-ingresos-de-ventas](./top-3-productos-por-ingresos-de-ventas.PNG)
 
-![sales-revenue-split-by-category](./sales-revenue-split-by-category.PNG)
+#### Distribución de los ingresos por categoría (%)
 
-### Top Product per Category
+En marzo, los productos para hombres seguían siendo la categoría líder con un 56% de participación en los ingresos totales de ventas. Este liderazgo, curiosamente, es el mismo para los últimos dos meses de febrero y enero.
 
-It has been observed that there were some differences in the montly top revenue earner items 
-for both Men and Women. In the case of March came in, the Pink Fluro Polkadot Socks (1,367 units) 
-and the Navy Oversized Jeans (1,375 units) proved to be the top winners respectively. The 
-Blue Polo Shirts (1,281 units) in the Men category the highest sales recorded in the month 
-of February while in the Women category was the Khaki Suit Jackets (1,296 units) which posted 
-the highest unit sales. Only a change in the Women category was recorded in January with the 
-Grey Fashion Jackets being the leading product (1,300 units), the Blue Polo Shirts product 
-maintained their place (1,264 units).
+![distribucion-de-ingresos-de-venta-por-categoria](./distribucion-de-ingresos-de-venta-por-categoria.PNG)
 
+#### Producto más vendido por categoría
 
-![top-product-per-category](./top-product-per-category.PNG)
+Se ha observado que hubo algunas diferencias en los artículos de mayores ingresos mensuales tanto para hombres como para mujeres. En el caso de marzo, los calcetines de lunares fluorescentes rosas (1,367 unidades) y los jeans oversized azul marino (1,375 unidades) demostraron ser los grandes ganadores respectivamente. Las Camisas Polo Azules (1,281 unidades) en la categoría de Hombres registraron las ventas más altas en el mes de febrero, mientras que en la categoría de Mujeres fueron las Chaquetas de Traje Caqui (1,296 unidades) las que registraron las ventas más altas. Solo se registró un cambio en la categoría de Mujeres en enero, con las Chaquetas de Moda Grises siendo el producto líder (1,300 unidades), el producto Camisetas Polo Azules mantuvo su lugar. (1,264 units).
 
-### Most frequent 3-Product Combo in Transactions
 
-In March, the top product mix included a Women’s Black Straight Jeans, a pair of Men’s Pink Fluorescent Polkadot Socks, and Men’s White T-shirt with 136 sales recorded. This trend was evident also in Q1 with two products constant (Jeans and T-shirt) and a different third product every month: Women’s Khaki Suit Jacket in February (112 sales) and Men’s Navy Solid Socks in January (117 sales).
+¡[producto-mas-vendido-por-categoria-y-cantidad](./producto-mas-vendido-por-categoria-y-cantidad.PNG)
 
-![most-frequent-3-product-combo-in-transaction](./most-common-3-product-combo-in-transactions.PNG)
+#### Combinación de 3 productos más frecuente en las transacciones
 
-### Sales Revenue Split by Segment per category (%)
+En marzo, la mezcla de productos más vendida incluyó unos Jeans Negros Rectos para Mujer, un par de Calcetines de Lunares Fluorescentes Rosados para Hombre y una Camiseta Blanca para Hombre, con 136 ventas registradas. Esta tendencia también fue evidente en el primer trimestre con dos productos constantes (Jeans y camiseta) y un tercer producto diferente cada mes: Chaqueta de traje caqui para mujer en febrero (112 ventas) y calcetines sólidos azul marino para hombre en enero. (117 sales).
 
-In March, the revenue distribution indicated Men's Shirts leading at 56.5% while Socks followed at 43.5% meanwhile Women’s Jackets led at 63.2% while Jeans retreated at 36.8%. Generally, the same pattern of distribution was observed in the first quarter of the year (January-March).
+![combo-de-3-productos-mas-comun-en-transacciones](./combo-de-3-productos-mas-comun-en-transacciones.PNG)
 
-![sales-revenue-split-by-segment-per-category](./sales-revenue-split-by-segment-per-category.PNG)
+#### Distribución de los ingresos por ventas por segmento por categoría (%)
 
-### Top Product per Segment
+En marzo, la distribución de ingresos indicó que las Camisas de Hombre lideraban con un 56.5%, mientras que los Calcetines seguían con un 43.5%; por otro lado, las Chaquetas de Mujer lideraban con un 63.2%, mientras que los Jeans retrocedían al 36.8%. En general, se observó el mismo patrón de distribución en el primer trimestre del año. (January-March).
 
-In March, established performers were Navy Oversized Jeans (1,375 pieces) in Jeans, White Tee Shirts (1,346 pieces) in Shirts, Grey Stylish Jackets (1,322 pieces) in Jackets, and Pink Fluro Polka Dot Socks (1,367 pieces) in Socks. It is interesting to note that February registered a total turnaround in the top products in the various segments with the only exception of White Tee Shirts whose performance was the same in January.
+![distribucion-de-ingresos-de-ventas-por-segmento-y-categoria](./distribucion-de-ingresos-de-ventas-por-segmento-y-categoria.PNG)
 
-![top-product-per-segment](./top-product-per-segment.PNG)
+#### Producto más vendido por segmento
 
+En marzo, los artículos más vendidos fueron los Jeans en color marino (1,375 unidades) en Jeans, las Camisetas Blancas (1,346 unidades) en Camisas, las Chaquetas Elegantes Grises (1,322 piezas) en Chaquetas, y los Calcetines de Lunares Flúor Rosa (1,367 piezas) en Calcetines. Es interesante notar que febrero registró un cambio total en los productos más destacados en los diversos segmentos, con la única excepción de las camisetas blancas, cuyo rendimiento fue el mismo en enero.
 
-### Transaction Penetration per Product
+![producto-mas-vendido-por-segmento](./producto-mas-vendido-por-segmento.PNG)
 
 
-When it comes to the sales of the White Tee Shirt for men it was the center of attention in March and through it conquered a market penetration of 53% squeezing the previous month’s leader Khaki Suit Jackets whose market share stood at 54%. As it differs from the market leader this January who was the Cream Relaxed Jeans with 52%.
+#### Penetración de transacciones por producto
 
-![transaction-penetration-per-product](./transaction-penetration-per-product.PNG)
 
-### Sales Revenue Split by Product per Segment
+En cuanto a las ventas de la camiseta blanca para hombres, fue el centro de atención en marzo y, a través de ella, conquistó una penetración de mercado del 53%, superando al líder del mes anterior, las chaquetas de traje caqui, cuyo porcentaje de mercado se situaba en el 54%. Ya que se diferencia del líder del mercado este enero, que fueron los Jeans Relaxed Cream con un 52%.
 
-It was observed across the respective segments that there was a uniform sales pattern as in the earlier months. Interestingly, in every segment, the leading product was its top revenue garner: Grey Fashion Jackets (57.5%) in the Jackets category, Black Straight Jeans (58.5%) in the Jeans category, Blue Polo shirts (53.3%) in the Shirts category, and Navy Solid Socks (44.1%) in the Socks category, while the second and third products in the segments also had a consistent revenue share.
+![penetracion-de-transaccion-por-producto](./penetracion-de-transaccion-por-producto.PNG)
 
-![sales-revenue-split-by-product-per-segment](./sales-revenue-split-by-product-per-segment.PNG)
+#### Distribución de ingresos por ventas por producto por segmento
 
-## Recommendations
+Se observó en los respectivos segmentos que había un patrón de ventas uniforme como en los meses anteriores. Curiosamente, en cada segmento, el producto líder era el que más ingresos generaba: Chaquetas de Moda Grises (57.5%) en la categoría de Chaquetas, Jeans Rectos Negros (58.5%) en la categoría de Jeans, Camisetas Polo Azules (53.3%) en la categoría de Camisas, y Calcetines Sólidos Marinos (44.1%) en la categoría de Calcetines, mientras que el segundo y tercer producto en los segmentos también tenían una participación de ingresos consistente.
 
-In consideration of the findings derived from the case study, the following are important recommendations sorted by strategic areas: 
+![ventas-ingresos-divididos-por-producto-por-segmento](./distribucion-de-ingresos-de-ventas-por-producto-y-segmento.PNG)
 
-1. Optimizing Sales Performance:
+## Recomendaciones
 
-   1.1 Take advantage of the increase in sales in march by raising strategies in 
-   terms of stock and promotion of sales within that period. The projections in 
-   marketing during that time should give advice on discounts to enable 
-   such tendencies to continue.
+En consideración de los hallazgos derivados del estudio de caso, las siguientes son recomendaciones importantes clasificadas por áreas estratégicas: 
 
-   1.2 Prioritize extending the assortment of the category of men’s apparel,
-   primarily shirts (Blue Polo), since they account for 56% of the overall
-   revenues while equally ensuring that there are high levels of stocks for
-   other regular best-shopping items such as Grey Fashion Jackets.
+1. Optimización del rendimiento de ventas:
 
-2. Enhancing Profitability: 
+   1.1 Aprovecha el aumento en las ventas de marzo implementando estrategias en términos de inventario y promoción de ventas durante ese período. Las proyecciones en marketing durante ese tiempo deberían dar consejos sobre descuentos para permitir que tales tendencias continúen.
 
-    2.1 There is a need to sustain the successful downward revision of 
-    the discount rates (recorded March improvement of 3.4%) in order to
-    enhance margin developments.
+   1.2 Priorizar la ampliación del surtido de la categoría de ropa masculina, principalmente camisas (polo azul), ya que representan el 56% de los ingresos totales, asegurando al mismo tiempo que haya altos niveles de existencias para otros artículos de compra habitual como las Chaquetas de Moda Grises.
 
-    2.2 Tactics of marketing should concentrate on price cuts for slow
-    moving stock only and not in overarching marketing strategies.
+2. Mejorar la rentabilidad: 
 
-3. Inventory Management:
+    2.1 Es necesario mantener la exitosa revisión a la baja de las tasas de descuento (mejora registrada en marzo del 3.4%) para mejorar el desarrollo de los márgenes.
+
+    2.2 Las tácticas de marketing deben concentrarse únicamente en los recortes de precios para el inventario de lenta rotación y no en estrategias de marketing generales.
+
+3. Gestión de inventario:
                                                  
-     3.1 Continue to stock the highest selling three products which include 
-     the Black Straigth Jeans, Pink Fluro Polkadot Socks, White Tee Shirt, 
-     Khaki Suit Jacket, and Navy Solid Socks in relatively higher quantities. 
+     3.1 Continúe abasteciendo los tres productos más vendidos, que incluyen los Jeans Rectos Negros, los Calcetines de Lunares Flúor Rosados, la Camiseta Blanca, la Chaqueta de Traje Caqui y los Calcetines Sólidos Azul Marino en cantidades relativamente mayores. 
 
-     3.2 Introduce clutter-busting or simplification strategies on certain 
-    products accompanied by the re-planning of inventory management where
-    the business transaction rates are more than fifty percent.
+     3.2 Introducir estrategias de eliminación de desorden o simplificación en ciertos productos acompañadas de la replanificación de la gestión de inventarios donde las tasas de transacción comercial son superiores al cincuenta por ciento.
 
-    3.3  Strategically concentrate on the management of such products that have
-    exhibited moderate performance across segments for the entire period.
+     3.3 Concéntrese estratégicamente en la gestión de aquellos productos que han mostrado un rendimiento moderado en todos los segmentos durante todo el período.
     
-    3.4 To maximize their return on investment, the company should either
-    discontinue or redesign the product lines that command very low levels
-    of transaction penetration rates.
+     3.4 Para maximizar su retorno de inversión, la empresa debería discontinuar o rediseñar las líneas de productos que tienen niveles muy bajos de tasas de penetración de transacciones.
 
-4. Customer Interaction:
+4. Interacción con el cliente:
 
-    4.1 Considering the high share of transactions made by the members, 
-    initiatives targeting non-member customers should be put in place.
+    4.1 Considerando la alta proporción de transacciones realizadas por los miembros, se deben implementar iniciativas dirigidas a los clientes no miembros.
 
-    4.2 Develop new offers to the members reflecting their transaction history. 
+    4.2 Desarrollar nuevas ofertas para los miembros que reflejen su historial de transacciones. 
 
-    4.3 Devise advertising approaches for the most ordered product pairings 
-    including the three Most Frequently Bought Together Combo in the analysis.
+    4.3 Diseñar enfoques publicitarios para las combinaciones de productos más pedidos, incluyendo las tres combinaciones más compradas juntas en el análisis.
