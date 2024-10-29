@@ -49,25 +49,25 @@ Los siguientes enlaces contienen todas las consultas de PostgreSQL que utilizamo
 En marzo, la cantidad de unidades vendidas fue de 15,608, un aumento del 5.3% (+788 unidades) en comparación con febrero. (14,820). Esta tendencia también es evidente en el aumento del 5.5% desde enero.
 
 
-¡[unidades-vendidas-totales](./unidades-vendidas-totales.PNG)
+![unidades-vendidas-totales](./unidades-vendidas-totales.PNG)
 
 #### Ingresos totales por ventas
 
 En marzo, los ingresos totales por ventas alcanzaron los $447,227, un aumento del 6.1% respecto a febrero ($421,554). Este patrón de crecimiento constante también se observa en el aumento del 6.3% desde enero.
 
-¡[ingresos-totales-por-ventas](./ingresos-totales-por-ventas.PNG)
+![ingresos-totales-por-ventas](./ingresos-totales-por-ventas.PNG)
 
 #### Ingresos por ventas netas
 
 En marzo, los ingresos netos por ventas ascendieron a $394,248, un aumento del 6.6% respecto a febrero ($421,554). Este patrón de crecimiento constante también se observa en el aumento del 6.8% desde enero.
 
-¡[ingresos-por-ventas-netas](./ingresos-por-ventas-netas.PNG)
+![ingresos-por-ventas-netas](./ingresos-por-ventas-netas.PNG)
 
 #### Monto total del descuento
 
 En marzo, el monto total de descuentos alcanzó los $52,978, un aumento del 2.5% respecto a febrero ($51,661). Este patrón de crecimiento constante también se observa en el aumento del 2.6% desde enero.
 
-¡[total-discount-amount](./monto-total-de-descuento.PNG)
+![total-discount-amount](./monto-total-de-descuento.PNG)
 
 #### Beneficio bruto
 
@@ -93,7 +93,7 @@ Las camisas fueron las líderes tanto en ingresos por ventas como en ganancias, 
 Marzo tuvo 860 transacciones, un aumento del 5.9% en comparación con febrero. (812). Este patrón de crecimiento constante también se observa en el aumento del 3.86% desde enero. (828).
 
 
-¡[transacciones únicas](./transacciones-unicas.PNG)
+![transacciones únicas](./transacciones-unicas.PNG)
 
 #### Promedio de productos únicos por transacción
 
@@ -109,13 +109,13 @@ En marzo, los clientes compraron un promedio de 6.5 artículos distintos por tra
 
 En marzo, el valor promedio del descuento alcanzó un 11.8%, una disminución del 3.4% en comparación con febrero. Este patrón de disminución constante también se observa en la disminución del 4% desde enero.
 
-¡[valor-promedio-de-descuento](./valor-promedio-de-descuento.PNG)
+![valor-promedio-de-descuento](./valor-promedio-de-descuento.PNG)
 
 #### División de transacciones para miembros vs no miembros
 
 En marzo, las transacciones son realizadas principalmente por clientes miembros con un 59% (510), una tendencia consistente también observada en meses anteriores.
 
-¡[transacciones-divididas-para-miembro-vs-no-miembro](./transacciones-entre-miembros-y-no-miembros.PNG)
+![transacciones-divididas-para-miembro-vs-no-miembro](./transacciones-entre-miembros-y-no-miembros.PNG)
 
 
 #### Ingresos promedio de ventas para miembros vs no miembros
@@ -123,7 +123,7 @@ En marzo, las transacciones son realizadas principalmente por clientes miembros 
 En marzo, el ingreso promedio por ventas fue de $86 y $87 para miembros y no miembros, respectivamente. Estas cantidades se mantuvieron relativamente estables en los meses anteriores.
 
 
-¡[ingresos-promedio-de-ventas-para-miembros-vs-no-miembros](./ingresos-por-ventas-promedio-entre-miembros-y-no-miembros.PNG)
+![ingresos-promedio-de-ventas-para-miembros-vs-no-miembros](./ingresos-por-ventas-promedio-entre-miembros-y-no-miembros.PNG)
 
 
 ### Análisis de productos
@@ -145,7 +145,7 @@ En marzo, los productos para hombres seguían siendo la categoría líder con un
 Se ha observado que hubo algunas diferencias en los artículos de mayores ingresos mensuales tanto para hombres como para mujeres. En el caso de marzo, los calcetines de lunares fluorescentes rosas (1,367 unidades) y los jeans oversized azul marino (1,375 unidades) demostraron ser los grandes ganadores respectivamente. Las Camisas Polo Azules (1,281 unidades) en la categoría de Hombres registraron las ventas más altas en el mes de febrero, mientras que en la categoría de Mujeres fueron las Chaquetas de Traje Caqui (1,296 unidades) las que registraron las ventas más altas. Solo se registró un cambio en la categoría de Mujeres en enero, con las Chaquetas de Moda Grises siendo el producto líder (1,300 unidades), el producto Camisetas Polo Azules mantuvo su lugar. (1,264 units).
 
 
-¡[producto-mas-vendido-por-categoria-y-cantidad](./producto-mas-vendido-por-categoria-y-cantidad.PNG)
+![producto-mas-vendido-por-categoria-y-cantidad](./producto-mas-vendido-por-categoria-y-cantidad.PNG)
 
 #### Combinación de 3 productos más frecuente en las transacciones
 
