@@ -221,11 +221,11 @@ In consideration of the findings derived from the case study, the following are 
      the Black Straigth Jeans, Pink Fluro Polkadot Socks, White Tee Shirt, 
      Khaki Suit Jacket, and Navy Solid Socks in relatively higher quantities. 
 
-     3.2 Introduce clutter-busting or simplification strategies on certain 
+     3.2 Introduce simplification strategies on certain 
     products accompanied by the re-planning of inventory management where
-    the business transaction rates are more than fifty percent.
+    the business transaction rates are more than 50%.
 
-     3.3  Strategically concentrate on the management of such products that have
+     3.3  Strategically concentrate on the management of products that have
     exhibited moderate performance across segments for the entire period.
     
      3.4 To maximize their return on investment, the company should either
@@ -239,5 +239,5 @@ In consideration of the findings derived from the case study, the following are 
 
     4.2 Develop new offers to the members reflecting their transaction history. 
 
-    4.3 Devise advertising approaches for the most ordered product pairings 
+    4.3 Devise advertising approaches for the most ordered product combos
     including the three Most Frequently Bought Together Combo in the analysis.
