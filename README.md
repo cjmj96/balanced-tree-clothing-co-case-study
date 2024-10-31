@@ -185,7 +185,7 @@ En consideración de los hallazgos derivados del estudio de caso, las siguientes
 
 1. Optimización del rendimiento de ventas:
 
-   1.1 Aprovecha el aumento en las ventas de marzo implementando estrategias en términos de inventario y promoción de ventas durante ese período. Las proyecciones en marketing durante ese tiempo deberían dar consejos sobre descuentos para permitir que tales tendencias continúen.
+   1.1 Aprovechar el aumento en las ventas de marzo implementando estrategias en términos de inventario y promoción de ventas durante ese período. Las proyecciones de marketing durante ese tiempo deberían dar consejos sobre descuentos para permitir que tales tendencias continúen.
 
    1.2 Priorizar la ampliación del surtido de la categoría de ropa masculina, principalmente camisas (polo azul), ya que representan el 56% de los ingresos totales, asegurando al mismo tiempo que haya altos niveles de existencias para otros artículos de compra habitual como las Chaquetas de Moda Grises.
 
@@ -197,11 +197,11 @@ En consideración de los hallazgos derivados del estudio de caso, las siguientes
 
 3. Gestión de inventario:
                                                  
-     3.1 Continúe abasteciendo los tres productos más vendidos, que incluyen los Jeans Rectos Negros, los Calcetines de Lunares Flúor Rosados, la Camiseta Blanca, la Chaqueta de Traje Caqui y los Calcetines Sólidos Azul Marino en cantidades relativamente mayores. 
+     3.1 Continuar abasteciendo los tres productos más vendidos, que incluyen los Jeans Rectos Negros, los Calcetines de Lunares Flúor Rosados, la Camiseta Blanca, la Chaqueta de Traje Caqui y los Calcetines Sólidos Azul Marino en cantidades relativamente mayores. 
 
-     3.2 Introducir estrategias de eliminación de desorden o simplificación en ciertos productos acompañadas de la replanificación de la gestión de inventarios donde las tasas de transacción comercial son superiores al cincuenta por ciento.
+     3.2 Introducir estrategias de simplificación en ciertos productos, acompañados de la replanificación de la gestión de inventarios donde las tasas de transacción comercial son superiores al 50%.
 
-     3.3 Concéntrese estratégicamente en la gestión de aquellos productos que han mostrado un rendimiento moderado en todos los segmentos durante todo el período.
+     3.3 Concéntrarse estratégicamente en la gestión de aquellos productos que han mostrado un rendimiento moderado en todos los segmentos durante el trimestre analizado.
     
      3.4 Para maximizar su retorno de inversión, la empresa debería discontinuar o rediseñar las líneas de productos que tienen niveles muy bajos de tasas de penetración de transacciones.
 
