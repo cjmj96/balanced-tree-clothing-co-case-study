@@ -3,113 +3,219 @@
 
 ## Antecedentes del Proyecto
 
-¡La compañía Balanced Tree Clothing se enorgullece de ofrecer una gama optimizada de ropa y vestimenta para el estilo de vida del aventurero moderno!
 
-Danny, el CEO de esta moderna empresa de moda, te ha pedido que ayudes a los equipos de merchandising a analizar su rendimiento de ventas y generar un informe financiero básico para compartir con el resto de la empresa.
 
-Este proyecto analiza datos de productos y ventas para determinar el rendimiento de ventas de la empresa.
+La compañía Balanced Tree Clothing, ofrece una gama amplia de ropa para el estilo de vida del aventurero moderno. Danny, 
+el CEO de esta moderna empresa de moda, necesita apoyo para los equipos de mercadotecnia al analizar 
+el rendimiento de ventas y generar un informe financiero básico.
+
+
+
+Este proyecto analiza los datos de ventas para determinar el rendimiento de ventas y ajustar la 
+estrategia de la empresa si es necesario.
+
+
 
 Las ideas y recomendaciones se presentan en las siguientes áreas clave:
 
-- Análisis de alto nivel: Proporciona una visión general de alto nivel sobre el rendimiento de ventas de la empresa, incluyendo métricas financieras de manera mensual y diaria.
 
-- Análisis de transacciones: Analizar los datos relacionados con las transacciones para extraer KPIs, incluyendo transacciones únicas, promedio de productos únicos comprados en cada transacción, valor promedio de descuento por transacción, etc.
 
-- Análisis de productos: Analizar los datos relacionados con el producto para extraer KPIs, incluyendo la cantidad total, los ingresos y los descuentos para cada segmento, el producto más vendido para cada segmento, el producto más vendido para cada categoría, etc.
+- Análisis de alto nivel: Proporciona una visión general de alto nivel sobre el rendimiento de ventas de 
+la empresa, incluyendo métricas financieras de manera mensual y diaria.
+
+
+
+- Análisis de transacciones: Analiza los datos relacionados con transacciones, incluyendo transacciones únicas, 
+promedio de productos únicos comprados en cada transacción, valor promedio de descuento por transacción, etc.
+
+
+
+- Análisis de productos: Analiza los datos relacionados con productos, incluyendo la cantidad total, 
+los ingresos y los descuentos para cada segmento, el producto más vendido para cada segmento, el producto 
+más vendido para cada categoría, etc.
+
+
+
 
 
 ## Estructura de datos y verificaciones iniciales
 
-El conjunto de datos (base de datos) presenta 2 tablas. El primero, llamado `balanced_tree.product_details`, incluye toda la información sobre toda la gama que Balanced Clothing vende en su tienda. El segundo, `balanced_tree.sales`, contiene información a nivel de producto para todas las transacciones realizadas para Balanced Tree, incluyendo cantidad, precio, porcentaje de descuento, estado de miembro, un ID de transacción y también la marca de tiempo de la transacción. La tabla anterior abarca datos del primer trimestre de 2021.Las tablas contienen 12 y 15,095 observaciones respectivamente o 15,107 en total.
 
+
+El conjunto de datos (base de datos) presenta 2 tablas. La primera, llamada **product_details**, incluye toda la información del inventario disponible en la tienda. El segundo, **sales**, contiene información de todas las transacciones (ventas) realizadas, incluyendo cantidad, precio, 
+
+descuento (%), tipo de membresía, ID de transacción y también la marca de tiempo de la transacción. Estos datos abarcan el primer trimestre de 2021. Las tablas contienen 12 y 15,095 observaciones respectivamente o 15,107 en total.
 
 
 ![erd](erd.png)
 
-El esquema de base datos puede ser encontrado [aquí](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/balanced_tree_clothing_co_schema.sql)
+El esquema de la base de datos puede ser encontrado [aquí](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/balanced_tree_clothing_co_schema.sql)
 
 
 ## Resumen Ejecutivo
 
+
+
 ### Visión general de descubrimientos
 
-Las ventas del mes actual (marzo de 2021) muestran un desempeño positivo en diferentes métricas de salud financiera en comparación con los meses anteriores. (February and January). Las métricas utilizadas fueron Total de unidades vendidas, Ingresos totales por ventas, Ingresos netos por ventas y ganancia bruta. Las siguientes secciones explorarán factores adicionales que contribuyen y destacarán áreas clave de oportunidad para la mejora.
 
-A continuación se muestra la página de análisis de alto nivel del Tableau Dashboard y se incluyen más ejemplos a lo largo del informe. El panel interactivo completo se puede ver [aquí](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+
+Las ventas del último mes (marzo de 2021) muestran un desempeño positivo en diferentes métricas de salud financiera si se compara a meses anteriores en el mismo trimestre. Las métricas utilizadas fueron **total de unidades vendidas**, **ingresos totales por ventas**, **ingresos netos por ventas** y **ganancia bruta**. Las siguientes secciones explorarán esto en mayor detalle. 
+
+
+
+Los resultados se presentan en varios dashboards, que se encuentran [aquí](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+
+
 
 [![Tableros de análisis de ventas financieras](https://public.tableau.com/static/images/An/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard/1.png)](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard)
 
-Los siguientes enlaces contienen todas las consultas de PostgreSQL que utilizamos en nuestro análisis de ventas. Estas consultas están disponibles en el directorio `/codigo`, específicamente en estos enlaces de GitHub: [Análisis de alto nivel](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_alto_nivel.sql), [Análisis de transacciones](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_transacciones.sql), y [Análisis de productos](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_productos.sql).
+
+
+Las consultas de PostgreSQL que se utilizaron para realizar los análisis están disponibles en el directorio **/codigo**, específicamente en estos enlaces de Github: [Análisis de alto nivel](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_alto_nivel.sql), [Análisis de transacciones](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_transacciones.sql), y [Análisis de productos](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/spanish/code/analisis_de_productos.sql).
+
+
 
 ### Análisis de alto nivel
 
 
+
+
+
 #### Unidades totales vendidas
+
+
+
+
 
 En marzo, la cantidad de unidades vendidas fue de 15,608, un aumento del 5.3% (+788 unidades) en comparación con febrero. (14,820). Esta tendencia también es evidente en el aumento del 5.5% desde enero.
 
 
+
+
+
 ![unidades-vendidas-totales](./unidades-vendidas-totales.PNG)
+
+
 
 #### Ingresos totales por ventas
 
+
+
 En marzo, los ingresos totales por ventas alcanzaron los $447,227, un aumento del 6.1% respecto a febrero ($421,554). Este patrón de crecimiento constante también se observa en el aumento del 6.3% desde enero.
+
+
 
 ![ingresos-totales-por-ventas](./ingresos-totales-por-ventas.PNG)
 
+
+
 #### Ingresos por ventas netas
+
+
 
 En marzo, los ingresos netos por ventas ascendieron a $394,248, un aumento del 6.6% respecto a febrero ($421,554). Este patrón de crecimiento constante también se observa en el aumento del 6.8% desde enero.
 
+
+
 ![ingresos-por-ventas-netas](./ingresos-por-ventas-netas.PNG)
+
+
 
 #### Monto total del descuento
 
+
+
 En marzo, el monto total de descuentos alcanzó los $52,978, un aumento del 2.5% respecto a febrero ($51,661). Este patrón de crecimiento constante también se observa en el aumento del 2.6% desde enero.
 
+
+
 ![total-discount-amount](./monto-total-de-descuento.PNG)
+
+
 
 #### Beneficio bruto
 
 
+
+
+
 En marzo, el beneficio bruto ascendió a $157,699, un aumento del 6.6% respecto a febrero ($147,957). Este patrón de crecimiento constante también se observa en el aumento del 6.8% desde enero.
 
+
+
 ![beneficio-bruto](./beneficio-bruto.PNG)
+
+
+
+
 
 
 
 #### Ingresos por ventas y beneficio bruto por segmento
 
 
+
+
+
 Las camisas fueron las líderes tanto en ingresos por ventas como en ganancias, con $141,500 y $49,800, respectivamente. Esto representó un aumento del 6.4% en los ingresos y un aumento del 6.7% en las ganancias desde febrero, así como un crecimiento considerable del 7.52% y del 7.7% en ambas métricas desde enero.
 
+
+
 ![ingresos-por-ventas-y-beneficio-bruto-por-segmento](./ingresos-por-ventas-y-beneficio-bruto-por-segmento.PNG)
+
+
 
 ### Análisis de transacciones
 
 
+
+
+
 #### Transacciones únicas
+
+
 
 Marzo tuvo 860 transacciones, un aumento del 5.9% en comparación con febrero. (812). Este patrón de crecimiento constante también se observa en el aumento del 3.86% desde enero. (828).
 
 
+
+
+
 ![transacciones únicas](./transacciones-unicas.PNG)
 
+
+
 #### Promedio de productos únicos por transacción
+
+
+
 
 
 En marzo, los clientes compraron un promedio de 6.5 artículos distintos por transacción, una disminución del 1% en comparación con febrero. (6.6). Este patrón es inexistente (6.5) en enero.
 
 
+
+
+
 ![promedio-de-productos-unicos-por-transaccion](./promedio-de-productos-por-transaccion.PNG)
+
+
+
 
 
 #### Valor promedio de descuento
 
 
+
+
+
 En marzo, el valor promedio del descuento alcanzó un 11.8%, una disminución del 3.4% en comparación con febrero. Este patrón de disminución constante también se observa en la disminución del 4% desde enero.
 
+
+
 ![valor-promedio-de-descuento](./valor-promedio-de-descuento.PNG)
+
 
 #### División de transacciones para miembros vs no miembros
 
@@ -181,34 +287,24 @@ Se observó en los respectivos segmentos que había un patrón de ventas uniform
 
 ## Recomendaciones
 
-En consideración de los hallazgos derivados del estudio de caso, las siguientes son recomendaciones importantes clasificadas por áreas estratégicas: 
 
-1. Optimización del rendimiento de ventas:
 
-   1.1 Aprovechar el aumento en las ventas de marzo implementando estrategias en términos de inventario y promoción de ventas durante ese período. Las proyecciones de marketing durante ese tiempo deberían dar consejos sobre descuentos para permitir que tales tendencias continúen.
+De los hallazgos resultantes del análisis se extraen las siguientes recomendaciones:
 
-   1.2 Priorizar la ampliación del surtido de la categoría de ropa masculina, principalmente camisas (polo azul), ya que representan el 56% de los ingresos totales, asegurando al mismo tiempo que haya altos niveles de existencias para otros artículos de compra habitual como las Chaquetas de Moda Grises.
 
-2. Mejorar la rentabilidad: 
 
-    2.1 Es necesario mantener la exitosa revisión a la baja de las tasas de descuento (mejora registrada en marzo del 3.4%) para mejorar el desarrollo de los márgenes.
+1. Optimización del rendimiento de ventas: Ampliar el inventario en la categoría de artículos de ropa masculina, especialmente en las camisas (polo azul) que aportan el 56% de los ingresos totales, asegurando al mismo tiempo grandes cantidades de los otros productos de compra habitual: chaquetas de moda grises.
 
-    2.2 Las tácticas de marketing deben concentrarse únicamente en los recortes de precios para el inventario de lenta rotación y no en estrategias de marketing generales.
+2. Mejorar los márgenes: 
 
-3. Gestión de inventario:
-                                                 
-     3.1 Continuar abasteciendo los tres productos más vendidos, que incluyen los Jeans Rectos Negros, los Calcetines de Lunares Flúor Rosados, la Camiseta Blanca, la Chaqueta de Traje Caqui y los Calcetines Sólidos Azul Marino en cantidades relativamente mayores. 
+    2.1 Mantener la positiva revisión a la baja de las tasas de descuento (mejora de 3,4% en marzo) para mejorar el desarrollo de los márgenes.
 
-     3.2 Introducir estrategias de simplificación en ciertos productos, acompañados de la replanificación de la gestión de inventarios donde las tasas de transacción comercial son superiores al 50%.
+    2.2 Crear estrategias de marketing únicamente centradas en recortes de precios del inventario con baja frecuencia de venta.
 
-     3.3 Concéntrarse estratégicamente en la gestión de aquellos productos que han mostrado un rendimiento moderado en todos los segmentos durante el trimestre analizado.
-    
-     3.4 Para maximizar su retorno de inversión, la empresa debería discontinuar o rediseñar las líneas de productos que tienen niveles muy bajos de tasas de penetración de transacciones.
+3. Gestion del inventario:
 
-4. Interacción con el cliente:
+    3.1 Garantizar la disponibilidad de inventario de los tres productos más vendidos en conjunto: los jeans rectos negros, los calcetines lunares fucsias, la camiseta blanca, la chaqueta de traje caqui y el calcetín básico azul marino.
 
-    4.1 Considerando la alta proporción de transacciones realizadas por los miembros, se deben implementar iniciativas dirigidas a los clientes no miembros.
+    3.2 Centrarse estratégicamente en la gestión de aquellos artículos que han tenido rendimiento medio en todos los segmentos en el trimestre examinado.
 
-    4.2 Desarrollar nuevas ofertas para los miembros que reflejen su historial de transacciones. 
-
-    4.3 Diseñar enfoques publicitarios para las combinaciones de productos más pedidos, incluyendo las tres combinaciones más compradas juntas en el análisis.
+    3.3 La empresa debería descontinuar o rediseñar las categorías de artículos que tienen muy bajos niveles de tasas de penetración en las transacciones para maximizar su ROI.
