@@ -26,11 +26,10 @@ discount for each segment, top selling product for each segment, top selling pro
 
 ## Data structure and initial checks
 
-The dataset (database) presents 2 tables. The first, called `balanced_tree.product_details` includes all information about the entire range that 
-Balanced Clothing sells in their store. The second, `balanced_tree.sales` contains product level information for all the 
-transactions made for Balanced Tree including quantity, price, percentage discount, member status, a transaction ID and also 
-the transaction timestamp. The previous table spans data from the Q1 of 2021. The tables contains 12 and 15,095 observations 
-respectively or 15,107 in total.
+The dataset (database) presents 2 tables. The first, called **product_details** includes information about the stock that 
+Balanced Clothing sells in their store. The second, **sales** contains transaction information including quantity, price, 
+percentage discount, member status, a transaction ID and also the transaction timestamp. The tables spans data from the Q1 of 2021. The 
+tables contains 12 and 15,095 observations respectively or 15,107 in total.
 
 
 ![erd](erd.png)
@@ -41,7 +40,7 @@ The database schema can be found [here](https://github.com/cjmj96/balanced-tree-
 
 ### Overview of Findings
 
-The sales of thecurrent month (March 2021) exhibits positive performance in different financial health metrics compared to previous months (February and January). The metrics used were Total units sold, Total sales revenue, Net sales revenue and Gross profit. The following sections
+The sales of the current month (March 2021) exhibits positive performance in different financial health metrics compared to previous months (February and January). The metrics used were Total units sold, Total sales revenue, Net sales revenue and Gross profit. The following sections
 will explore additional contributing factors and highlight key opportunity areas for improvement.
 
 Below is the high level analysis page from the Tableau Dashboard and more examples are included throughout the report. The entire interactive dashboard can be viewed [here](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
@@ -201,17 +200,9 @@ It was observed across the respective segments that there was a uniform sales pa
 
 In consideration of the findings derived from the case study, the following are important recommendations sorted by strategic areas: 
 
-1. Optimizing Sales Performance:
-
-   1.1 Take advantage of the increase in sales in march by raising strategies in 
-   terms of stock and promotion of sales within that period. The projections in 
-   marketing during that time should give advice on discounts to enable 
-   such tendencies to continue.
-
-   1.2 Prioritize extending the assortment of the category of men’s apparel,
-   primarily shirts (Blue Polo), since they account for 56% of the overall
-   revenues while equally ensuring that there are high levels of stocks for
-   other regular best-shopping items such as Grey Fashion Jackets.
+1. Optimizing Sales Performance: Prioritize extending the assortment of the category of men’s apparel,
+   primarily shirts (Blue Polo), since they account for 56% of the overall revenues while equally 
+   ensuring that there are high levels of stocks for other regular best-shopping items such as Grey Fashion Jackets.
 
 2. Enhancing Profitability: 
 
@@ -219,8 +210,8 @@ In consideration of the findings derived from the case study, the following are 
     the discount rates (recorded March improvement of 3.4%) in order to
     enhance margin developments.
 
-    2.2 Tactics of marketing should concentrate on price cuts for slow
-    moving stock only and not in overarching marketing strategies.
+    2.2 Marketing strategies should concentrate on price cuts for slow
+    moving stock only.
 
 3. Inventory Management:
                                                  
@@ -228,23 +219,9 @@ In consideration of the findings derived from the case study, the following are 
      the Black Straigth Jeans, Pink Fluro Polkadot Socks, White Tee Shirt, 
      Khaki Suit Jacket, and Navy Solid Socks in relatively higher quantities. 
 
-     3.2 Introduce simplification strategies on certain 
-    products accompanied by the re-planning of inventory management where
-    the business transaction rates are more than 50%.
-
-     3.3  Strategically concentrate on the management of products that have
+     3.2  Strategically concentrate on the management of products that have
     exhibited moderate performance across segments for the entire period.
     
      3.4 To maximize their return on investment, the company should either
     discontinue or redesign the product lines that command very low levels
     of transaction penetration rates.
-
-4. Customer Interaction:
-
-    4.1 Considering the high share of transactions made by the members, 
-    initiatives targeting non-member customers should be put in place.
-
-    4.2 Develop new offers to the members reflecting their transaction history. 
-
-    4.3 Devise advertising approaches for the most ordered product combos
-    including the three Most Frequently Bought Together Combo in the analysis.
