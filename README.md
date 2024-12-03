@@ -69,9 +69,7 @@ salud financiera si se compara a meses anteriores en el mismo trimestre. Las mé
 
 
 
-Los resultados se presentan en varios dashboards, que se encuentran [aquí](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
-
-
+Los resultados se presentan en varios dashboards, que se encuentran [aquí](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 [![Tableros de análisis de ventas financieras](https://public.tableau.com/static/images/An/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard/1.png)](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard)
 
@@ -108,7 +106,7 @@ comparación con febrero. (14,820). Esta tendencia también es evidente en el au
 
 
 
-#### Ingresos totales por ventas
+#### Ingresos de ventas brutas
 
 
 
@@ -122,11 +120,11 @@ aumento del 6.3% desde enero.
 
 
 
-#### Ingresos por ventas netas
+#### Ingresos de ventas netas
 
 
 
-En marzo, los ingresos netos por ventas ascendieron a $394,248, un aumento del 6.6% respecto a 
+En marzo, los ingresos de ventas netas ascendieron a $394,248, un aumento del 6.6% respecto a 
 febrero ($421,554). Este patrón de crecimiento constante también se observa en el aumento del 6.8% desde enero.
 
 
@@ -168,13 +166,13 @@ crecimiento constante también se observa en el aumento del 6.8% desde enero.
 
 
 
-#### Ingresos por ventas y beneficio bruto por segmento
+#### Ingresos de ventas y beneficio bruto por segmento
 
 
 
 
 
-Las camisas fueron las líderes tanto en ingresos por ventas como en ganancias, con $141,500 y $49,800, respectivamente. Esto 
+Las camisas fueron las líderes tanto en ingresos de ventas como en beneficio, con $141,500 y $49,800, respectivamente. Esto 
 representó un aumento del 6.4% en los ingresos y un aumento del 6.7% en las ganancias desde febrero, así como un 
 crecimiento considerable del 7.52% y del 7.7% en ambas métricas desde enero.
 
@@ -238,42 +236,66 @@ febrero. Este patrón de disminución constante también se observa en la dismin
 ![valor-promedio-de-descuento](./valor-promedio-de-descuento.PNG)
 
 
-#### División de transacciones para miembros vs no miembros
+#### Transacciones por tipo de cliente
 
 En marzo, las transacciones son realizadas principalmente por clientes miembros con un 59% (510), una tendencia consistente 
 también observada en meses anteriores.
 
-![transacciones-divididas-para-miembro-vs-no-miembro](./transacciones-entre-miembros-y-no-miembros.PNG)
+![transacciones-por-tipo-de-cliente](./transacciones-por-tipo-de-cliente.PNG)
 
 
-#### Ingresos promedio de ventas para miembros vs no miembros
+#### Ingresos promedio de ventas brutas por tipo de cliente
 
 En marzo, el ingreso promedio por ventas fue de $86 y $87 para miembros y no miembros, respectivamente. Estas 
 cantidades se mantuvieron relativamente estables en los meses anteriores.
 
 
-![ingresos-promedio-de-ventas-para-miembros-vs-no-miembros](./ingresos-por-ventas-promedio-entre-miembros-y-no-miembros.PNG)
+![ingresos-de-ventas-brutas-por-tipo-de-cliente](./ingresos-de-ventas-brutas-por-tipo-de-cliente.PNG)
 
 
 ### Análisis de productos
 
-#### Los 3 productos principales por ingresos de ventas (antes del descuento)
+#### Los 3 productos más vendidos por ventas brutas
 
 El mes de marzo, la camisa polo azul ($75,000), la chaqueta de moda gris ($71,000) y la camiseta blanca ($54,000) generaron 
 los mayores ingresos. Este patrón de ventas fue similar al de febrero. Sin embargo, los rankings para esto fueron diferentes 
 a los de enero, donde la chaqueta de moda gris se vendió más, seguida de cerca por la camiseta polo de color azul que 
 ocupó la segunda posición.
 
-![top-3-productos-por-ingresos-de-ventas](./top-3-productos-por-ingresos-de-ventas.PNG)
+![top-3-productos-más-vendidos-por-ingresos-de-ventas-brutas](./top-3-productos-más-vendidos-por-ingresos-de-ventas-brutas.PNG)
 
-#### Distribución de los ingresos por categoría (%)
+
+#### Combinación de 3 productos más frecuente en las transacciones
+
+En marzo, la mezcla de productos más vendida incluyó unos jeans negros rectos para mujer, un par de calcetines de lunares fluorescentes rosados para hombre y una 
+camiseta blanca para hombre, con 136 ventas registradas. Esta tendencia también fue evidente en el primer trimestre con dos productos 
+constantes (jeans y camiseta) y un tercer producto diferente cada mes: chaqueta de traje caqui para mujer en febrero (112 ventas) y calcetines sólidos azul marino para hombre en enero (117 ventas).
+
+![combo-de-3-productos-mas-comun-en-transacciones](./combo-de-3-productos-mas-comun-en-transacciones.PNG)
+
+
+#### Penetración de producto por transaccion
+
+
+En cuanto a las ventas de la camiseta blanca para hombres, fue el centro de atención en marzo y, a través de ella, 
+conquistó una penetración de mercado del 53%, superando al líder del mes anterior, las chaquetas de traje caqui, 
+cuyo porcentaje de mercado se situaba en el 54%. Ya que se diferencia del líder del mercado este enero, que fueron 
+los jeans relajados de color crema con un 52%.
+
+![penetracion-de-producto-por-transaccion](./penetracion-de-producto-por-transaccion.PNG)
+
+
+
+### Análisis de productos por género
+
+#### Ingresos de ventas brutas por género
 
 En marzo, los productos para hombres seguían siendo la categoría líder con un 56% de participación en los ingresos totales 
 de ventas. Este liderazgo, curiosamente, es el mismo para los últimos dos meses de febrero y enero.
 
-![distribucion-de-ingresos-de-venta-por-categoria](./distribucion-de-ingresos-de-venta-por-categoria.PNG)
+![ventas-brutas-por-género](./ventas-brutas-por-género.PNG)
 
-#### Producto más vendido por categoría
+#### Producto más vendido por género
 
 Se ha observado que hubo algunas diferencias en los artículos de mayores ingresos mensuales tanto para hombres 
 como para mujeres. En el caso de marzo, los calcetines de lunares fluorescentes rosas (1,367 unidades) y los 
@@ -284,23 +306,17 @@ más altas. Solo se registró un cambio en la categoría de mujeres en enero, co
 producto líder (1,300 unidades), el producto camisetas polo azules mantuvo su lugar (1,264 unidades).
 
 
-![producto-mas-vendido-por-categoria-y-cantidad](./producto-mas-vendido-por-categoria-y-cantidad.PNG)
+![producto-más-vendido-por-género](./producto-más-vendido-por-género.PNG)
 
-#### Combinación de 3 productos más frecuente en las transacciones
-
-En marzo, la mezcla de productos más vendida incluyó unos jeans negros rectos para mujer, un par de calcetines de lunares fluorescentes rosados para hombre y una 
-camiseta blanca para hombre, con 136 ventas registradas. Esta tendencia también fue evidente en el primer trimestre con dos productos 
-constantes (jeans y camiseta) y un tercer producto diferente cada mes: chaqueta de traje caqui para mujer en febrero (112 ventas) y calcetines sólidos azul marino para hombre en enero (117 ventas).
-
-![combo-de-3-productos-mas-comun-en-transacciones](./combo-de-3-productos-mas-comun-en-transacciones.PNG)
-
-#### Distribución de los ingresos por ventas por segmento por categoría (%)
+#### Ingresos de ventas brutas por segmento y género
 
 En marzo, la distribución de ingresos indicó que las camisas de hombre lideraban con un 56.5%, mientras que los calcetines 
 seguían con un 43.5%; por otro lado, las chaquetas de mujer lideraban con un 63.2%, mientras que los jeans retrocedían al 36.8%. En general, 
 se observó el mismo patrón de distribución en el primer trimestre del año.
 
-![distribucion-de-ingresos-de-ventas-por-segmento-y-categoria](./distribucion-de-ingresos-de-ventas-por-segmento-y-categoria.PNG)
+![ventas-brutas-por-segmento-y-género](./ventas-brutas-por-segmento-y-género.PNG)
+
+### Análisis de segmentos
 
 #### Producto más vendido por segmento
 
@@ -309,24 +325,14 @@ chaquetas elegantes grises (1,322 piezas) en chaquetas, y los calcetines de luna
 notar que febrero registró un cambio total en los productos más destacados en los diversos segmentos, con la única excepción de las 
 camisetas blancas, cuyo rendimiento fue el mismo en enero.
 
-![producto-mas-vendido-por-segmento](./producto-mas-vendido-por-segmento.PNG)
+![producto-mas-vendido-por-cantidad-segmento](./producto-mas-vendido-por-cantidad-segmento.PNG)
 
-
-#### Penetración de transacciones por producto
-
-
-En cuanto a las ventas de la camiseta blanca para hombres, fue el centro de atención en marzo y, a través de ella, 
-conquistó una penetración de mercado del 53%, superando al líder del mes anterior, las chaquetas de traje caqui, 
-cuyo porcentaje de mercado se situaba en el 54%. Ya que se diferencia del líder del mercado este enero, que fueron 
-los jeans relajados de color crema con un 52%.
-
-![penetracion-de-transaccion-por-producto](./penetracion-de-transaccion-por-producto.PNG)
-
-#### Distribución de ingresos por ventas por producto por segmento
+#### Ingresos de ventas brutas por segmento
 
 Se observó en los respectivos segmentos que había un patrón de ventas uniforme como en los meses anteriores. Curiosamente, en cada segmento, el producto líder era el que más ingresos generaba: Chaquetas de Moda Grises (57.5%) en la categoría de Chaquetas, Jeans Rectos Negros (58.5%) en la categoría de Jeans, Camisetas Polo Azules (53.3%) en la categoría de Camisas, y Calcetines Sólidos Marinos (44.1%) en la categoría de Calcetines, mientras que el segundo y tercer producto en los segmentos también tenían una participación de ingresos consistente.
 
-![ventas-ingresos-divididos-por-producto-por-segmento](./distribucion-de-ingresos-de-ventas-por-producto-y-segmento.PNG)
+![ventas-brutas-por-segmento](./ventas-brutas-por-segmento.PNG)
+
 
 ## Recomendaciones
 
