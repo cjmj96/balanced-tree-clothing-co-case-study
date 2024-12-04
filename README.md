@@ -64,12 +64,13 @@ El esquema de la base de datos puede ser encontrado [aquí](https://github.com/c
 
 Las ventas del último mes (marzo de 2021) muestran un desempeño positivo en diferentes métricas de 
 salud financiera si se compara a meses anteriores en el mismo trimestre. Las métricas utilizadas fueron 
-**total de unidades vendidas**, **ingresos totales por ventas**, **ingresos netos por ventas** y 
+**total de unidades vendidas**, **ingresos de ventas brutas**, **ingresos de ventas netas** y 
 **ganancia bruta**. Las siguientes secciones explorarán esto en mayor detalle. 
 
 
 
-Los resultados se presentan en varios dashboards, que se encuentran [aquí](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+Los resultados se presentan en varios dashboards, que se encuentran [aquí](https://public.tableau.com/app/profile/christianmontenegro/viz/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?publish=yes).
+
 
 [![Tableros de análisis de ventas financieras](https://public.tableau.com/static/images/An/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard/1.png)](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard)
 
