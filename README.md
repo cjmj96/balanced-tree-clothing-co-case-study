@@ -47,6 +47,8 @@ Below is the high level analysis page from the Tableau Dashboard and more exampl
 
 [![Financial Sales Analysis Dashboards](https://public.tableau.com/static/images/Fi/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard/1_rss.png)](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard)
 
+
+
 The following links contains all the PostgreSQL queries that we used in our sales analysis. These queries are available in the `/code` directory, specifically in these GitHub links: [High-Level Analysis](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/main/code/high_level_analysis.sql),[Transaction Analysis](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/main/code/transaction_analysis.sql), and [Product Analysis](https://github.com/cjmj96/balanced-tree-clothing-co-case-study/blob/main/code/product_analysis.sql).
 
 ### High Level Analysis
@@ -59,7 +61,7 @@ In March, the amount of units sold was 15,608, up by 5.3% (+788 units) from Febr
 
 ![total-units-sold](./total-units-sold.PNG)
 
-#### Total Sales Revenue
+#### Gross Sales Revenue
 
 In March, the total sales revenue reached $447,227, up by 6.1% from February ($421,554). This consistent growth pattern is also observed in 
 the 6.3% increase from January.
@@ -95,6 +97,8 @@ Shirts were the leader in both sales revenue and profit with $141,500 and $49,80
 
 ![sales-revenue-and-gross-profit-by-segment](./sales-revenue-and-gross-profit-by-segment.PNG)
 
+
+
 ### Transaction Analysis
 
 
@@ -122,14 +126,14 @@ In March, the average discount value reached a 11.8%, down by 3.4% from February
 
 ![average-discount-value](./average-discount-value.PNG)
 
-#### Transaction Split for member vs non-member
+#### Transaction Split by client type
 
 In March, the transactions are mostly done by member clients with a 59% (510), a consistent trend also observed in previous months.
 
 ![transactions-split-for-member-vs-non-member](./transactions-split-for-member-vs-non-member.PNG)
 
 
-#### Average Sales Revenue for member vs non-member
+#### Average Gross Sales Revenue by client type
 
 In March, the average sales revenue was $86 and $87 for member and non-member respectively. These amounts remained relatively stable in previous months.
 
@@ -138,19 +142,43 @@ In March, the average sales revenue was $86 and $87 for member and non-member re
 
 ### Product Analysis
 
-#### Top 3 Products by Sales Revenue (Pre-discount)
+#### Top 3 Products by Gross Sales Revenue
 
 The month of March, saw the Blue Polo Shirt ($75,000), the Grey Fashion Jacket ($71,000), and the white tees shirt ($54,000) generating the highest revenues. This pattern of sales was similar to that of February. However, the rankings for this were different for that of January, where the grey fashion jacket sold the most, followed closely by the blue polored polo shirt which took the second position.
 
 ![top-3-products-by-sales-revenue](./top-3-products-by-sales-revenue.PNG)
 
-#### Sales Revenue Split by Category (%)
+
+#### Most frequent 3-Product Combo in Transactions
+
+In March, the top product mix included a Women’s Black Straight Jeans, a pair of Men’s Pink Fluorescent Polkadot Socks, and Men’s White T-shirt with 136 sales recorded. This trend was evident also in Q1 with two products constant (Jeans and T-shirt) and a different third product every month: Women’s Khaki Suit Jacket in February (112 sales) and Men’s Navy Solid Socks in January (117 sales).
+
+![most-frequent-3-product-combo-in-transaction](./most-common-3-product-combo-in-transactions.PNG)
+
+
+#### Product penetration per Transaction
+
+
+When it comes to the sales of the White Tee Shirt for men it was the center of attention in March and through it conquered a market penetration of 53% squeezing the previous month’s leader Khaki Suit Jackets whose market share stood at 54%. As it differs from the market leader this January who was the Cream Relaxed Jeans with 52%.
+
+![transaction-penetration-per-product](./transaction-penetration-per-product.PNG)
+
+#### Gross Sales Revenue by Segment
+
+It was observed across the respective segments that there was a uniform sales pattern as in the earlier months. Interestingly, in every segment, the leading product was its top revenue garner: Grey Fashion Jackets (57.5%) in the Jackets category, Black Straight Jeans (58.5%) in the Jeans category, Blue Polo shirts (53.3%) in the Shirts category, and Navy Solid Socks (44.1%) in the Socks category, while the second and third products in the segments also had a consistent revenue share.
+
+![sales-revenue-split-by-product-per-segment](./sales-revenue-split-by-product-per-segment.PNG)
+
+
+### Product analysis by Gender
+
+#### Gross Sales Revenue by Gender
 
 In March, Men’s products still were the leading category with 56% share of total sales revenue. This lead, interestingly, is the same for the last two months of February and January.
 
 ![sales-revenue-split-by-category](./sales-revenue-split-by-category.PNG)
 
-#### Top Product per Category
+#### Top Product by Gender (quantity)
 
 It has been observed that there were some differences in the montly top revenue earner items 
 for both Men and Women. In the case of March came in, the Pink Fluro Polkadot Socks (1,367 units) 
@@ -164,37 +192,28 @@ maintained their place (1,264 units).
 
 ![top-product-per-category](./top-product-per-category.PNG)
 
-#### Most frequent 3-Product Combo in Transactions
-
-In March, the top product mix included a Women’s Black Straight Jeans, a pair of Men’s Pink Fluorescent Polkadot Socks, and Men’s White T-shirt with 136 sales recorded. This trend was evident also in Q1 with two products constant (Jeans and T-shirt) and a different third product every month: Women’s Khaki Suit Jacket in February (112 sales) and Men’s Navy Solid Socks in January (117 sales).
-
-![most-frequent-3-product-combo-in-transaction](./most-common-3-product-combo-in-transactions.PNG)
-
-#### Sales Revenue Split by Segment per category (%)
+#### Gross Sales Revenue by Segment and Gender
 
 In March, the revenue distribution indicated Men's Shirts leading at 56.5% while Socks followed at 43.5% meanwhile Women’s Jackets led at 63.2% while Jeans retreated at 36.8%. Generally, the same pattern of distribution was observed in the first quarter of the year (January-March).
 
 ![sales-revenue-split-by-segment-per-category](./sales-revenue-split-by-segment-per-category.PNG)
 
-#### Top Product per Segment
+
+### Segment analysis
+
+#### Top Product by Segment (quantity)
 
 In March, established performers were Navy Oversized Jeans (1,375 pieces) in Jeans, White Tee Shirts (1,346 pieces) in Shirts, Grey Stylish Jackets (1,322 pieces) in Jackets, and Pink Fluro Polka Dot Socks (1,367 pieces) in Socks. It is interesting to note that February registered a total turnaround in the top products in the various segments with the only exception of White Tee Shirts whose performance was the same in January.
 
 ![top-product-per-segment](./top-product-per-segment.PNG)
 
-
-#### Transaction Penetration per Product
-
-
-When it comes to the sales of the White Tee Shirt for men it was the center of attention in March and through it conquered a market penetration of 53% squeezing the previous month’s leader Khaki Suit Jackets whose market share stood at 54%. As it differs from the market leader this January who was the Cream Relaxed Jeans with 52%.
-
-![transaction-penetration-per-product](./transaction-penetration-per-product.PNG)
-
-#### Sales Revenue Split by Product per Segment
+#### Gross Sales Revenue by Segment
 
 It was observed across the respective segments that there was a uniform sales pattern as in the earlier months. Interestingly, in every segment, the leading product was its top revenue garner: Grey Fashion Jackets (57.5%) in the Jackets category, Black Straight Jeans (58.5%) in the Jeans category, Blue Polo shirts (53.3%) in the Shirts category, and Navy Solid Socks (44.1%) in the Socks category, while the second and third products in the segments also had a consistent revenue share.
 
 ![sales-revenue-split-by-product-per-segment](./sales-revenue-split-by-product-per-segment.PNG)
+
+
 
 ## Recommendations
 
@@ -204,7 +223,7 @@ In consideration of the findings derived from the case study, the following are 
    primarily shirts (Blue Polo), since they account for 56% of the overall revenues while equally 
    ensuring that there are high levels of stocks for other regular best-shopping items such as Grey Fashion Jackets.
 
-2. Enhancing Profitability: 
+2. Enhancing Profitability:
 
     2.1 There is a need to sustain the successful downward revision of 
     the discount rates (recorded March improvement of 3.4%) in order to
