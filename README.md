@@ -69,8 +69,7 @@ salud financiera si se compara a meses anteriores en el mismo trimestre. Las mé
 
 
 
-Los resultados se presentan en varios dashboards, que se encuentran [aquí](https://public.tableau.com/app/profile/christianmontenegro/viz/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?publish=yes).
-
+Los resultados se presentan en varios dashboards, que se encuentran [aquí](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
 [![Tableros de análisis de ventas financieras](https://public.tableau.com/static/images/An/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard/1.png)](https://public.tableau.com/views/AnlisisdeVentasparalacompaaBalancedTreeClothing/Analisisdealtoniveldashboard)
 
