@@ -40,7 +40,7 @@ The database schema can be found [here](https://github.com/cjmj96/balanced-tree-
 
 ### Overview of Findings
 
-The sales of the current month (March 2021) exhibits positive performance in different financial health metrics compared to previous months (February and January). The metrics used were Total units sold, Total sales revenue, Net sales revenue and Gross profit. The following sections
+The sales of the current month (March 2021) exhibits positive performance in different financial health metrics compared to previous months (February and January). The metrics used were Total units sold, Gross sales revenue, Net sales revenue and Gross profit. The following sections
 will explore additional contributing factors and highlight key opportunity areas for improvement.
 
 Below is the high level analysis page from the Tableau Dashboard and more examples are included throughout the report. The entire interactive dashboard can be viewed [here](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
