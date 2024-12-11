@@ -170,7 +170,7 @@ When it comes to the sales of the White Tee Shirt for men it was the center of a
 
 In March, Men’s products still were the leading category with 56% share of total sales revenue. This lead, interestingly, is the same for the last two months of February and January.
 
-![gross-sales-revenue-by-gender](./gross-sales-revenue-by-gender.PNG)
+![gross-sales-revenue-distribution-by-gender](./gross-sales-revenue-distribution-by-gender.PNG)
 
 #### Top Product by Gender (quantity)
 
@@ -190,7 +190,7 @@ maintained their place (1,264 units).
 
 In March, the revenue distribution indicated Men's Shirts leading at 56.5% while Socks followed at 43.5% meanwhile Women’s Jackets led at 63.2% while Jeans retreated at 36.8%. Generally, the same pattern of distribution was observed in the first quarter of the year (January-March).
 
-![gross-sales-revenue-by-segment-and-gender](./gross-sales-revenue-by-segment-and-gender.PNG)
+![gross-sales-revenue-distribution-by-segment-and-gender](./gross-sales-revenue-distribution-by-segment-and-gender.PNG)
 
 
 ### Segment analysis
@@ -205,7 +205,7 @@ In March, established performers were Navy Oversized Jeans (1,375 pieces) in Jea
 
 It was observed across the respective segments that there was a uniform sales pattern as in the earlier months. Interestingly, in every segment, the leading product was its top revenue garner: Grey Fashion Jackets (57.5%) in the Jackets category, Black Straight Jeans (58.5%) in the Jeans category, Blue Polo shirts (53.3%) in the Shirts category, and Navy Solid Socks (44.1%) in the Socks category, while the second and third products in the segments also had a consistent revenue share.
 
-![gross-sales-revenue-by-segment](./gross-sales-revenue-by-segment.PNG)
+![gross-sales-revenue-by-segment](./gross-sales-revenue-distribution-by-segment.PNG)
 
 
 
