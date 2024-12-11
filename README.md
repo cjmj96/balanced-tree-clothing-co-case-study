@@ -116,7 +116,7 @@ aumento del 6.3% desde enero.
 
 
 
-![ingresos-totales-por-ventas](./ingresos-totales-por-ventas.PNG)
+![ingresos-de-ventas-brutas](./ingresos-de-ventas-brutas.PNG)
 
 
 
@@ -129,7 +129,7 @@ febrero ($421,554). Este patrón de crecimiento constante también se observa en
 
 
 
-![ingresos-por-ventas-netas](./ingresos-por-ventas-netas.PNG)
+![ingresos-de-ventas-netas](./ingresos-de-ventas-netas.PNG)
 
 
 
@@ -250,7 +250,7 @@ En marzo, el ingreso promedio por ventas fue de $86 y $87 para miembros y no mie
 cantidades se mantuvieron relativamente estables en los meses anteriores.
 
 
-![ingresos-de-ventas-brutas-por-tipo-de-cliente](./ingresos-de-ventas-brutas-por-tipo-de-cliente.PNG)
+![Ingresos-promedio-de-ventas-brutas-por-tipo-de-cliente](./Ingresos-promedio-de-ventas-brutas-por-tipo-de-cliente.PNG)
 
 
 ### Análisis de productos
@@ -271,7 +271,7 @@ En marzo, la mezcla de productos más vendida incluyó unos jeans negros rectos 
 camiseta blanca para hombre, con 136 ventas registradas. Esta tendencia también fue evidente en el primer trimestre con dos productos 
 constantes (jeans y camiseta) y un tercer producto diferente cada mes: chaqueta de traje caqui para mujer en febrero (112 ventas) y calcetines sólidos azul marino para hombre en enero (117 ventas).
 
-![combo-de-3-productos-mas-comun-en-transacciones](./combo-de-3-productos-mas-comun-en-transacciones.PNG)
+![combo-de-3-productos-mas-comun-en-transacciones-por-cantidad](./combo-de-3-productos-mas-comun-en-transacciones-por-cantidad.PNG)
 
 
 #### Penetración de producto por transaccion
