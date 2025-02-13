@@ -45,7 +45,8 @@ will explore additional contributing factors and highlight key opportunity areas
 
 Below is the high level analysis page from the Tableau Dashboard and more examples are included throughout the report. The entire interactive dashboard can be viewed [here](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/Executivesummary?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
-[![Financial Sales Analysis Dashboards](https://public.tableau.com/static/images/Fi/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard/1_rss.png)](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/HighLevelAnalysisDashboard)
+
+[![Financial Sales Analysis Dashboards](https://public.tableau.com/static/images/Fi/FinancialSalesAnalysisforBalancedTreeClothingCompany/Executivesummary/1.png)](https://public.tableau.com/views/FinancialSalesAnalysisforBalancedTreeClothingCompany/Executivesummary)
 
 
 
